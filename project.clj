@@ -8,4 +8,5 @@
              {:dependencies [[com.bhauman/rebel-readline "0.1.4"]]}
              :kaocha {:dependencies [[lambdaisland/kaocha "0.0-573"]]}}
   :aliases {"kaocha" ["with-profile" "+kaocha" "run" "-m" "kaocha.runner"]}
-  :repl-options {:init-ns assignments.core})
+  :repl-options {:init-ns assignments.core}
+  :main assignments.core)
