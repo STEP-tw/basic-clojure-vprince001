@@ -47,4 +47,9 @@
     (c/zero-aliases #{})
     (c/zero-aliases {})
     (c/zero-aliases "")
-    (c/zero-aliases 5)))
+    (c/zero-aliases 5)
+    ;;
+    (c/zero-separated-palindrome [1 2])
+    (c/zero-separated-palindrome [:a])
+    (c/zero-separated-palindrome [0])
+    ))
