@@ -148,11 +148,12 @@
   [coll1 coll2])
 
 ;; points-around-origin is a def not a defn
-(def points-around-origin
+(def
   ^{:level        :easy
     :use          '[for]
     :dont-use     '[hardcoded-values map filter]
     :implemented? false}
+  points-around-origin
   "Calculate all the points around the origin
   [-1 -1] [0 -1] [1 -1] etc. There should be 8 points
   Note this is a def, not a defn")
@@ -245,7 +246,6 @@
 
 (defn validate-sudoku-grid
   "Given a 9 by 9 sudoku grid, validate it."
-  {:level        :medium
+  {:level        :hard
    :implemented? false}
   [grid])
-

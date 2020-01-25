@@ -1,10 +1,23 @@
-# assignments
+# Assignments
 
-A Clojure library designed to ... well, that part is up to you.
+These assignments are designed to help you explore the clojure standard library.
+
+There are several functions in the namespaces assignments.conditions and assignments.lists
+
+Implement each of the functions and write as many tests as you see fit.
 
 ## Usage
 
-FIXME
+Mark the ":implemented?" field in the metadata of each function as true when you are done implementing
+the function.
+
+To run the tests use `bin/kaocha`
+
+To run the tests in watch mode, use `bin/kaocha --watch`
+
+To run the main, use `lein run`
+
+`lein run` only runs the functions whose :implemented? is marked true.
 
 ## License
 
