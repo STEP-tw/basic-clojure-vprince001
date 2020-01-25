@@ -202,3 +202,50 @@
    :dont-use     '[for loop recur reduce]
    :implemented? false}
   [coll nesting-factor])
+
+(defn split-comb
+  "Given a collection, return a new sequence where the first
+  half of the sequence is interleaved with the second half.
+  If the given collection has an odd number of elements, then
+  preserve the last element of the original collection
+  [1 2 3 4 5] => [1 3 2 4 5]"
+  {:level        :easy
+   :use          '[interleave split-at if rem concat take-last]
+   :dont-use     '[loop recur map-indexed take drop]
+   :implemented? false}
+  [coll])
+
+(defn muted-thirds
+  "Given a sequence of numbers, make every third element
+  0 while preserving the other elements
+  [1 2 8 4 15 2 7] => [1 2 0 4 15 0 7]"
+  {:level        :easy
+   :use          '[map cycle]
+   :dont-use     '[loop recur map-indexed take take-nth]
+   :implemented? false}
+  [coll])
+
+(defn palindrome?
+  "Implement a recursive palindrome check of any given sequence"
+  {:level        :easy
+   :use          '[empty? loop recur butlast rest]
+   :dont-use     '[reverse]
+   :implemented? false}
+  [coll])
+
+(defn index-of
+  "index-of takes a sequence and an element and finds the index
+  of the element in the given sequence. Returns -1 if element
+  is not found"
+  {:level        :easy
+   :use          '[loop recur rest]
+   :dont-use     '[.indexOf memfn]
+   :implemented? false}
+  [coll n])
+
+(defn validate-sudoku-grid
+  "Given a 9 by 9 sudoku grid, validate it."
+  {:level        :medium
+   :implemented? false}
+  [grid])
+
