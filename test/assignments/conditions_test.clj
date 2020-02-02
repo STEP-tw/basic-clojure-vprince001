@@ -35,3 +35,13 @@
     (is (= `(1 1 2 3) (duplicate-first `(1 2 3)))))
   (testing "return nil if col is empty"
     (is (= nil (duplicate-first `())))))
+
+(deftest five-point-someone-test
+  (testing "return :chetan-bhagat if y is 5"
+    (is (= :chetan-bhagat (five-point-someone 1 5))))
+  (testing "return :satan-bhagat if x is 5"
+    (is (= :satan-bhagat (five-point-someone 5 7))))
+  (testing "return :greece if x is greater than y"
+    (is (= :greece (five-point-someone 3 2))))
+  (testing "return :universe if all three condition fails"
+    (is (= :universe (five-point-someone 3 4)))))
