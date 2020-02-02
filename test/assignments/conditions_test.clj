@@ -45,3 +45,11 @@
     (is (= :greece (five-point-someone 3 2))))
   (testing "return :universe if all three condition fails"
     (is (= :universe (five-point-someone 3 4)))))
+
+(deftest order-in-words-test
+  (testing "return [:x-greater-than-y :y-greater-than-z] if x > y and y > z"
+    (is (= [:x-greater-than-y :y-greater-than-z] (order-in-words 4 3 2))))
+  (testing "return [:x-greater-than-y :z-greater-than-x] if x > y and z > x"
+    (is (= [:x-greater-than-y :z-greater-than-x] (order-in-words 4 3 5))))
+  (testing "return [:x-greater-than-y :z-greater-than-x] if z > x"
+    (is (= [:z-greater-than-x] (order-in-words 2 3 4)))))
