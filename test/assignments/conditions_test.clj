@@ -21,3 +21,11 @@
     (is (= nil (harishchandra false))))
   (testing "return nil if nil"
     (is (= nil (harishchandra nil)))))
+
+(deftest yudishtira-test
+  (testing "return value if truthy"
+    (is (= 2 (yudishtira 2))))
+  (testing "return :ashwathama if false"
+    (is (= :ashwathama (yudishtira false))))
+  (testing "return :ashwathama if nil"
+    (is (= :ashwathama (yudishtira nil)))))
