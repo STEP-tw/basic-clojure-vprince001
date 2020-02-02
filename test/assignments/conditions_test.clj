@@ -53,3 +53,25 @@
     (is (= [:x-greater-than-y :z-greater-than-x] (order-in-words 4 3 5))))
   (testing "return [:x-greater-than-y :z-greater-than-x] if z > x"
     (is (= [:z-greater-than-x] (order-in-words 2 3 4)))))
+
+(deftest zero-aliases-test
+  (testing "return :zero for 0"
+    (is (= :zero (zero-aliases 0))))
+  (testing "return :empty for empty vector"
+    (is (= :empty (zero-aliases []))))
+  (testing "return :empty for empty list"
+    (is (= :empty (zero-aliases `()))))
+  (testing "return :empty-set for empty set"
+    (is (= :empty-set (zero-aliases #{}))))
+  (testing "return :empty-map for empty map"
+    (is (= :empty-map (zero-aliases {}))))
+  (testing "return :empty-string for empty string"
+    (is (= :empty-string (zero-aliases ""))))
+  (testing "return :not-zero as default when upper cases doesn't matches"
+    (is (= :not-zero (zero-aliases "hello")))))
+
+(deftest zero-separated-palindrome-test
+  (testing "non-empty collection"
+    (is (= `(4 3 2 0 2 3 4) (zero-separated-palindrome [1 2 3]))))
+  (testing "empty collection"
+    (is (= `(0) (zero-separated-palindrome [])))))
