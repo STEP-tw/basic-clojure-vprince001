@@ -29,3 +29,9 @@
     (is (= :ashwathama (yudishtira false))))
   (testing "return :ashwathama if nil"
     (is (= :ashwathama (yudishtira nil)))))
+
+(deftest duplicate-first-test
+  (testing "return coll with the first element duplicated"
+    (is (= `(1 1 2 3) (duplicate-first `(1 2 3)))))
+  (testing "return nil if col is empty"
+    (is (= nil (duplicate-first `())))))
