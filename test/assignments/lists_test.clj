@@ -14,3 +14,7 @@
     (is (= 2 (count (range 2)))))
   (testing "returns zero for empty collection"
     (is (= 0 (count (range 0))))))
+
+(deftest filter'-test
+  (testing "returns collection of elements which matches the condition"
+    (is (= [0 2] (filter' even? (range 4))))))
