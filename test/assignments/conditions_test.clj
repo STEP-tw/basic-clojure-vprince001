@@ -75,3 +75,11 @@
     (is (= `(4 3 2 0 2 3 4) (zero-separated-palindrome [1 2 3]))))
   (testing "empty collection"
     (is (= `(0) (zero-separated-palindrome [])))))
+
+(deftest repeat-and-truncate-test
+  (testing "returns collection"
+    (is (= (range 4) (repeat-and-truncate (range 4) false false 3))))
+  (testing "returns collection concatenated to itself"
+    (is (= `(0 1 2 3 0 1 2 3) (repeat-and-truncate (range 4) true false 3))))
+  (testing "returns truncated collection concatenated to itself according to given value"
+    (is (= `(0 1 2 3 0 1) (repeat-and-truncate (range 4) true true 6)))))
