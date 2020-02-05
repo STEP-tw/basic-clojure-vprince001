@@ -3,9 +3,11 @@
             [assignments.lists :refer :all]))
 
 (deftest lists
-  (testing "map"
+  (testing "map'"
     (testing "identity with single coll"
-      (is (= [1 2 3] (map' identity [1 2 3]))))))
+      (is (= [1 2 3] (map' identity [1 2 3]))))
+    (testing "returns empty collection for empty collection"
+      (is (= [] (map' identity []))))))
 
 (deftest count'-test
   (testing "returns count of elements in collection"

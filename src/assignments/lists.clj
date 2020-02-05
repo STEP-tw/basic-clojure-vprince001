@@ -8,7 +8,13 @@
    :use          '[loop recur]
    :dont-use     '[map]
    :implemented? false}
-  [f & colls])
+  [f coll]
+  (loop [func f
+         coll coll 
+         result []]
+    (if (empty? coll)
+      result
+      (recur func (rest coll) (conj result (func (first coll)))))))
 
 (defn filter'
   "Implement a non-lazy version of filter that accepts a
@@ -37,7 +43,7 @@
   {:level        :easy
    :use          '[loop recur]
    :dont-use     '[count]
-   :implemented? false}
+   :implemented? true}
   [coll]
   (loop [coll coll
          index 0]
