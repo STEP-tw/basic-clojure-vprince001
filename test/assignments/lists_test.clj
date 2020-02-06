@@ -18,3 +18,9 @@
 (deftest filter'-test
   (testing "returns collection of elements which matches the condition"
     (is (= [0 2] (filter' even? (range 4))))))
+
+(deftest reduce'-test
+  (testing "arity 2"
+    (is (= 15 (reduce' + [1 2 3 4 5]))))
+  (testing "arity 3"
+    (is (= 15 (reduce' + 1 [2 3 4 5])))))
