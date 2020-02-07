@@ -28,3 +28,13 @@
 (deftest reverse'-test
   (testing "valid sequence"
     (is (= [3 2 1] (reverse' [1 2 3])))))
+
+(deftest every?'-test
+  (testing "with empty list"
+    (is (= true (every?' even? []))))
+  (testing "with all true values"
+    (is (= true (every?' even? [2 4 6]))))
+  (testing "with all falsy values"
+    (is (= false (every?' even? [1 3 5]))))
+  (testing "with some true values"
+    (is (= false (every?' even? [1 2])))))
