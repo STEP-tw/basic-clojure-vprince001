@@ -24,3 +24,7 @@
     (is (= 15 (reduce' + [1 2 3 4 5]))))
   (testing "arity 3"
     (is (= 15 (reduce' + 1 [2 3 4 5])))))
+
+(deftest reverse'-test
+  (testing "valid sequence"
+    (is (= [3 2 1] (reverse' [1 2 3])))))
