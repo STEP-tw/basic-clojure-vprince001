@@ -72,3 +72,7 @@
     (is (= [1 2 3 4 5] (union [1 2 3] [3 4 5]))))
   (testing "with common element and elements repeat"
     (is (= [1 2 3 1 4 5 6 4] (union [1 2 3 1] [4 5 6 3 2 4])))))
+
+(deftest cross-product-test
+  (testing "cross product"
+    (is (= [[1 4] [1 3] [1 5] [2 4] [2 3] [2 5] [3 4]] (cross-product [1 2 3] [4 3 5])))))
