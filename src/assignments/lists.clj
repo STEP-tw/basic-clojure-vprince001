@@ -185,8 +185,9 @@
   if elements repeat."
   {:level        :easy
    :use          '[remove into set ->>]
-   :implemented? false}
-  [coll1 coll2])
+   :implemented? true}
+  [coll1 coll2]
+  (concat coll1 (difference coll1 coll2)))
 
 ;; points-around-origin is a def not a defn
 (def
