@@ -58,3 +58,9 @@
 (deftest sum-of-adjacent-digits-test
   (testing "with ascending list"
     (is (= [3 5] (sum-of-adjacent-digits [1 2 3])))))
+
+(deftest difference-test
+  (testing "different list"
+    (is (= '(4 5) (difference [1 2 3] [1 2 3 4 5]))))
+  (testing "same list"
+    (is (= '() (difference [1 2 3] [1 2 3])))))
