@@ -48,3 +48,9 @@
     (is (= nil (some?' even? [1 3 5]))))
   (testing "with some true values"
     (is (= true (some?' even? [1 2])))))
+
+(deftest ascending?-test
+  (testing "with ascending list"
+    (is (= true (ascending? [1 2 3]))))
+  (testing "with not ascending list"
+    (is (= false (ascending? [2 14 6])))))
