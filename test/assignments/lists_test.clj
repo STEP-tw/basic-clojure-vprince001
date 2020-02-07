@@ -54,3 +54,7 @@
     (is (= true (ascending? [1 2 3]))))
   (testing "with not ascending list"
     (is (= false (ascending? [2 14 6])))))
+
+(deftest sum-of-adjacent-digits-test
+  (testing "with ascending list"
+    (is (= [3 5] (sum-of-adjacent-digits [1 2 3])))))
