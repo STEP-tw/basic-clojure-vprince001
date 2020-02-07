@@ -38,3 +38,13 @@
     (is (= false (every?' even? [1 3 5]))))
   (testing "with some true values"
     (is (= false (every?' even? [1 2])))))
+
+(deftest some?'-test
+  (testing "with empty list"
+    (is (= nil (some?' even? []))))
+  (testing "with all true values"
+    (is (= true (some?' even? [2 4 6]))))
+  (testing "with all falsy values"
+    (is (= nil (some?' even? [1 3 5]))))
+  (testing "with some true values"
+    (is (= true (some?' even? [1 2])))))
